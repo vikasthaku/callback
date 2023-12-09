@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,5 +27,51 @@
     }
     getRollNo();
   </script>  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function 1
+function doSomething(callback) {
+    setTimeout(function() {
+        console.log("First operation complete");
+        callback();
+    }, 1000);
+}
+
+// Function 2
+function doSomethingElse(callback) {
+    setTimeout(function() {
+        console.log("Second operation complete");
+        callback();
+    }, 1000);
+}
+
+// Function 3
+function doAnotherThing(callback) {
+    setTimeout(function() {
+        console.log("Third operation complete");
+        callback();
+    }, 1000);
+}
+
+// Callback hell example
+doSomething(function() {
+    doSomethingElse(function() {
+        doAnotherThing(function() {
+            console.log("All operations complete");
+        });
+    });
+});
+
+    </script>
 </body>
 </html>
